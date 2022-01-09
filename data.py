@@ -51,17 +51,3 @@ class Dataset:
         target = self.target[split_size:]
         score = self.score[split_size:]
         return evaluation.EmbeddingSimilarityEvaluator(source, target, score)
-
-
-
-
-# DATA_PATH = config["data_path"]
-# print(DATA_PATH)
-# a = Dataset(DATA_PATH)
-# b = a._get_dataloader(0.4)
-# print(b)
-
-# df = pd.read_excel(DATA_PATH)
-# df = df.sample(frac=1).reset_index(drop=True)
-# print(df.columns)
-
