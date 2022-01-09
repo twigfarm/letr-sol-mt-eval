@@ -1,0 +1,8 @@
+# https://itholic.github.io/python-yaml/
+# https://rfriend.tistory.com/540
+
+data_path: data/sample.xlsx
+user_data_path: data/test.xlsx
+model_path: models/
+split_ratio: 0.3
+epochs: 50
