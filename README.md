@@ -66,7 +66,6 @@ letr-sol-mt-eval
 │  main.py
 │  README.md
 │  requirements.txt
-│  scratch.py
 │  train.py
 │
 ├─config
