@@ -25,6 +25,9 @@ def train(config):
 
 
 if __name__ == '__main__':
+    if "models" not in os.listdir():
+        os.mkdir("models")
+
     with open("config/config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     train(config)

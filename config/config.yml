@@ -3,3 +3,4 @@ user_data_path: data/test.xlsx
 model_path: models/
 split_ratio: 0.3
 epochs: 50
+use_vanilla: Fale

@@ -9,7 +9,11 @@ def calculate_scores(model, sent1List, sent2List):
   return [cosine_scores[i][i].item() for i in range(len(cosine_scores))]
 
 def main(config):
-    model = SentenceTransformer(config['model_path'])
+    if use_vanilla:
+        print("Downloading model...")
+        model = SentenceTransformer('sentence-transformers/stsb-xlm-r-multilingual')
+    else:
+        model = SentenceTransformer(config['model_path'])
     df = pd.read_excel(config['user_data_path'])
     sent1 = df['source'].tolist()
     sent2 = df['target'].tolist()
