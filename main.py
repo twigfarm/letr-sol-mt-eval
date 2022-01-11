@@ -9,7 +9,8 @@ def calculate_scores(model, sent1List, sent2List):
   return [cosine_scores[i][i].item() for i in range(len(cosine_scores))]
 
 def main(config):
-    if use_vanilla:
+    vanilla = config['use_vanilla']
+    if vanilla:
         print("Downloading model...")
         model = SentenceTransformer('sentence-transformers/stsb-xlm-r-multilingual')
     else:
