@@ -15,6 +15,14 @@ pip install -r requirements.txt
 ## 하이퍼파라미터 및 경로 설정
 각종 경로 및 데이터를 나눌 비율, 학습 에포크 설정 등은 ```config/config.yml```을 통해 진행합니다.
 
+- ```data_path```: 학습에 사용되는 데이터 경로 (default: data/sample.xlsx)
+- ```split_ratio```: 학습 데이터셋을 나눌 비율 (default: 0.3)
+- ```epochs```: 학습시 에포크 수 (default: 50)
+- ```model_path```: 학습 후 저장되는 모델 폴더 (default: models/)
+- ```user_data_path```: 추론에 사용되는 데이터 경로 (default: data/test.xlsx)
+- ```use_vanilla```: 추론 때 훈련된 모델이 아닌, 기본(vanilla) 모델을 사용할지 여부 (default: False)
+
+
 
 ## 데이터
 ### Training 데이터
