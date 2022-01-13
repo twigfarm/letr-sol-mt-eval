@@ -22,7 +22,10 @@ pip install -r requirements.txt
 - ```user_data_path```: 추론에 사용되는 데이터 경로 (default: data/test.xlsx)
 - ```use_vanilla```: 추론 때 훈련된 모델이 아닌, 기본(vanilla) 모델을 사용할지 여부 (default: False)
 
-
+## HTER 스코어링 및 해당 척도의 타당성 평가
+번역기별 기계번역문과, 이에 대한 Post-Edited 기계번역문 쌍이 포함된 데이터셋을 준비합니다. 
+HTER 스코어링을 진행 후, BLEU, chrF, METEOR, hLEPOR, RIBES, BLEURT 등 reference-based 척도와의 Pearson's r 상관계수를 구하여 HTER 척도의 타당성을 평가합니다.
+상세정보는 ```HTER_sanity_check.ipynb```를 참고해주세요.
 
 ## 데이터
 ### Training 데이터
