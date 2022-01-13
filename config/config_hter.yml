@@ -1,0 +1,6 @@
+data_path: data/data_3296_hter.xlsx
+split_ratio: 0.3
+epochs: 50
+model_path: models/hter
+user_data_path: data/test.xlsx
+use_vanilla: False

@@ -33,7 +33,7 @@ if __name__ == '__main__':
                         default='config')
     args = parser.parse_args()
 
-    with open(f"config/{args.config_name}.yml") as f:
+    with open(f"config/{args.config_file_name}.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
     if not os.path.exists(config['model_path']):
