@@ -1,5 +1,6 @@
 from data import Dataset
 from sentence_transformers import SentenceTransformer, losses
+import os
 
 import yaml
 
@@ -25,10 +26,11 @@ def train(config):
 
 
 if __name__ == '__main__':
-    if "models" not in os.listdir():
-        os.mkdir("models")
-
     with open("config/config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
+
+    if config['model_path'] not in os.path.exists():
+        os.makedirs(config['model_path'], exist_ok=True)
+
     train(config)
 
