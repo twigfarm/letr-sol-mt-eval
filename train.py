@@ -29,7 +29,7 @@ if __name__ == '__main__':
     with open("config/config.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
-    if config['model_path'] not in os.path.exists():
+    if not os.path.exists():
         os.makedirs(config['model_path'], exist_ok=True)
 
     train(config)
