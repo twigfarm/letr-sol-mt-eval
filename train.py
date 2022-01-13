@@ -4,6 +4,8 @@ import os
 
 import yaml
 
+import argparse
+
 def train(config):
     print("Model Importing...")
     model = SentenceTransformer('sentence-transformers/stsb-xlm-r-multilingual')
@@ -26,7 +28,12 @@ def train(config):
 
 
 if __name__ == '__main__':
-    with open("config/config.yml") as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config_file_name', '-c', type=str,
+                        default='config')
+    args = parser.parse_args()
+
+    with open(f"config/{args.config_name}.yml") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
     if not os.path.exists(config['model_path']):
